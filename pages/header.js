@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header className="text-gray-600 body-font">
@@ -17,11 +19,21 @@ export default function Header() {
           <span className="ml-3 text-xl">W.inWoo</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900">Home</a>
-          <a className="mr-5 hover:text-gray-900">About Me</a>
-          <a className="mr-5 hover:text-gray-900">TimeLine</a>
-          <a className="mr-5 hover:text-gray-900">Skills</a>
-          <a className="mr-5 hover:text-gray-900">Project</a>
+          <Link href="/" className="mr-5 hover:text-gray-900">
+            Home
+          </Link>
+          <Link href="/about-me" className="mr-5 hover:text-gray-900">
+            About Me
+          </Link>
+          <Link href="/timeline" className="mr-5 hover:text-gray-900">
+            TimeLine
+          </Link>
+          <Link href="/skills" className="mr-5 hover:text-gray-900">
+            Skills
+          </Link>
+          <Link href="/project" className="mr-5 hover:text-gray-900">
+            Project
+          </Link>
         </nav>
         <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
           Button
