@@ -1,25 +1,41 @@
-import Header from "../pages/header";
+import { useState } from "react";
+import Header from "./header";
+const colors = require("../tailwind.config").theme.extend.colors;
 
-export default function Layout({ children }) {
+export default function Layout({ children, page }) {
+  const [mouseOver, setMouseOver] = useState(false);
   return (
-    <div className="grid h-screen place-items-center">
-      <section className="group relative w-full p-5 md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto min-h-[700px]">
+    <div className="min-h-screen h-full flex items-center">
+      <section
+        className="z-50 group relative w-full p-5 md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto min-h-[700px]"
+        onMouseOver={() => {
+          setMouseOver(true);
+        }}
+        onMouseOut={() => {
+          setMouseOver(false);
+        }}>
         <div className="absolute top-0 left-0">
           <svg width="300" height="300">
             <defs>
               <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop
                   offset="0"
-                  stop-color="yellow"
-                  className="transition-all duration-700  group-hover:[stop-color:#993399]"></stop>
+                  stopColor={
+                    mouseOver ? colors[page].color1 : colors[page].color2
+                  }
+                  className="transition-all duration-700"></stop>
                 <stop
                   offset=".5"
-                  stop-color="#993399"
-                  className="transition-all duration-700  group-hover:[stop-color:yellow]"></stop>
+                  stopColor={
+                    mouseOver ? colors[page].color2 : colors[page].color1
+                  }
+                  className="transition-all duration-700"></stop>
                 <stop
                   offset="1"
-                  stop-color="yellow"
-                  className="transition-all duration-700  group-hover:[stop-color:#993399]"></stop>
+                  stopColor={
+                    mouseOver ? colors[page].color1 : colors[page].color2
+                  }
+                  className="transition-all duration-700"></stop>
               </linearGradient>
             </defs>
             <path

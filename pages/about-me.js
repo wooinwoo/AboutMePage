@@ -2,7 +2,7 @@ import Layout from "../components/layout";
 
 export default function AboutMe() {
   return (
-    <Layout>
+    <Layout page={"about-me"}>
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex px-5  md:flex-row flex-col">
           <div className="lg:flex-grow lg:pr-24 md:pr-16 flex flex-col lg:flex-row md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
