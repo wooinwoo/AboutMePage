@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../components/layout";
 
 const projectValue = [
   {
-    imgSrc: "./images/zerogifticon.png",
     title: "ZeroGificon",
+    imgSrc: "./images/zerogifticon.png",
     explanation: "zero-gifticon은 사용자간 기프티콘을 거래하는 서비스입니다.",
     icons: ["./images/home.svg", "./images/github.svg"],
   },
@@ -22,7 +22,7 @@ const projectValue = [
     icons: ["./images/home.svg", "./images/github.svg"],
   },
   {
-    title: "자기소개 페이지",
+    title: "자기소개~",
     imgSrc: "./images/lawsCloud.png",
     explanation: "NextJs를 사용한 자기소개 웹페이지 입니다.",
     icons: ["./images/home.svg", "./images/github.svg"],
@@ -38,45 +38,51 @@ export default function Project() {
   const prevSlide = () => {
     if (currentImgIndex !== 0) {
       setCurrentImgIndex(currentImgIndex - 1);
-      setStyle({
-        transform: `translateX(-${currentImgIndex - 1}00%)`,
-      });
     }
   };
   const nextSlide = () => {
     if (currentImgIndex + 1 !== projectValue.length) {
       setCurrentImgIndex(currentImgIndex + 1);
-      setStyle({
-        transform: `translateX(-${currentImgIndex + 1}00%)`,
-      });
     }
   };
+
+  useEffect(() => {
+    setStyle({
+      transform: `translateX(-${currentImgIndex}00%)`,
+    });
+  }, [currentImgIndex]);
+
   return (
     <Layout page={"project"}>
-      <section className="flex text-gray-600 body-font container px-20 mx-auto">
-        <div className="w-[500px] relative flex">
-          <div className="w-[500px] overflow-hidden">
+      <section className="flex flex-col lg:flex-row text-gray-600 body-font container justify-center px-5 md:px-28 mx-auto">
+        <div className=" w-[320px] md:w-[500px] relative mx-auto ">
+          <div className=" overflow-hidden">
             <div
-              className="flex w-[500px] transition-all duration-700 ease-in-out"
+              className="flex transition-all duration-700 ease-in-out"
               style={style}>
               {projectValue.map((e, idx) => (
-                <div>
-                  <div
-                    className="bg-gray-300 p-6 rounded-lg w-[500px] h-[400px]"
-                    key={idx}>
-                    <img
-                      className="block rounded w-[500px] h-[250px] object-center mb-6"
-                      src={e.imgSrc}
-                      alt="content"
-                    />
-                    <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
-                      {e.title}
-                    </h2>
-                    <p className="leading-relaxed text-base">{e.explanation}</p>
+                <div key={idx}>
+                  <div className="relative card_container ">
+                    <div
+                      className="bg-gray-300 dark:bg-gray-700 p-2 rounded-lg w-[320px] md:w-[500px] h-[400px] transition-transform duration-1000 card_front"
+                      key={idx}>
+                      <img
+                        className="block rounded w-full  h-[250px] object-center mb-6"
+                        src={e.imgSrc}
+                        alt="content"
+                      />
+                      <h2 className="text-lg text-gray-900 font-medium title-font mb-4 dark:text-white">
+                        {e.title}
+                      </h2>
+                      <p className="leading-relaxed text-base text-slate-500 dark:text-slate-400">
+                        {e.explanation}
+                      </p>
+                    </div>
+                    <div className="absolute top-0 left-0 w-full h-full bg-gray-300 dark:bg-gray-700 rounded-lg duration-1000 card_back"></div>
                   </div>
-                  <div className="flex justify-around py-10 px-20 bg-gray-300 rounded-lg mt-2 w-[500px] h-[100px]">
-                    {e.icons.map((icon) => (
-                      <img className="block" src={icon} />
+                  <div className="flex justify-around py-10 px-20 bg-gray-300 dark:bg-gray-700 rounded-lg mt-2 w-full h-[100px]">
+                    {e.icons.map((icon, idx) => (
+                      <img className="blocks" src={icon} key={idx} />
                     ))}
                   </div>
                 </div>
@@ -94,27 +100,54 @@ export default function Project() {
             {">"}
           </button>
         </div>
-        <div class="container p-48  mx-auto">
-          <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
-            <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
-                CATEGORIES
-              </h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class="text-gray-400 hover:text-white">ZeroGificon</a>
+
+        <div className="container flex items-center justify-center mx-auto mt-24 lg:ml-24 lg:mt-10 ">
+          <div className="group text-center relative rounded-tl-lg w-[150px]">
+            <h2 className="absolute -top-20 -left-0 text-4xl text-slate-800 dark:text-slate-400">
+              Project
+            </h2>
+            <nav className="list-none bg-white dark:bg-slate-800 p-5 pr-0">
+              {projectValue.map((e, idx) => (
+                <li className="flex text-start flex-col py-2 cursor-pointer">
+                  <a
+                    className="duration-500 text-slate-500 dark:text-slate-400 hover:tracking-widest dark:hover:tracking-widest hover:text-gray-900 dark:hover:text-gray-50"
+                    onClick={() => setCurrentImgIndex(idx)}>
+                    <span className="inline-block relative">
+                      {e.title}
+                      <span
+                        className="inline-block absolute bottom-0 left-0 w-full h-[1px] duration-700 z-0 group-hover:z-10"
+                        style={{
+                          background:
+                            "linear-gradient(135deg,#FFF548 0%,#3C1A5B 50%,#FFF548 100%)",
+                          opacity: currentImgIndex === idx ? "1" : "0",
+                        }}
+                      />
+                      <span
+                        className="inline-block absolute bottom-0 left-0 w-full h-[1px] duration-700 z-10 group-hover:z-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg,#3C1A5B 0%,#FFF548 50%,#3C1A5B 100%)",
+                          opacity: currentImgIndex === idx ? "1" : "0",
+                        }}
+                      />
+                    </span>
+                  </a>
                 </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">LawsCloud</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">ReactShop</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">FourthLink</a>
-                </li>
-              </nav>
-            </div>
+              ))}
+            </nav>
+
+            <div
+              className="absolute w-[90px] h-[90px] -z-10 -top-1 -left-1 rounded-tl-lg duration-700 opacity-100 group-hover:opacity-0"
+              style={{
+                background:
+                  "linear-gradient(135deg,#FFF548 0%,#3C1A5B 50%,#FFF548 100%)",
+              }}></div>
+            <div
+              className="absolute w-[90px] h-[90px] -z-10 -top-1 -left-1 rounded-tl-lg duration-700 opacity-0 group-hover:opacity-100"
+              style={{
+                background:
+                  "linear-gradient(135deg,#3C1A5B 0%,#FFF548 50%,#3C1A5B 100%)",
+              }}></div>
           </div>
         </div>
       </section>
