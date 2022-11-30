@@ -4,13 +4,13 @@ export default function AboutMe() {
   return (
     <Layout page={"about-me"}>
       <section className="text-gray-600 body-font">
-        <div className="container mx-auto flex px-5  md:flex-row flex-col">
-          <div className="lg:flex-grow lg:pr-24 md:pr-16 flex flex-col lg:flex-row md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="container mx-auto flex justify-around md:flex-row flex-col">
+          <div className="lg:flex-grow flex justify-around flex-col lg:flex-row md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <div>
-              <h1 className="title-font sm:text-6xl text-3xl mb-4 font-medium text-gray-900">
+              <h1 className="title-font sm:text-6xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-100">
                 Welcome !
               </h1>
-              <p>
+              <p className="text-slate-600 dark:text-slate-400">
                 안녕하세요! <br />
                 개발이 즐거운 프론트엔드 개발자 우인우입니다! <br />
                 <br />
@@ -30,24 +30,44 @@ export default function AboutMe() {
                 <br /> 앞으로 좋은 모습 보여드리겠습니다!
               </p>
             </div>
-            <div className="my-10">
-              <p>
-                <em>Contact.·.·</em>
-                <br /> <span className="text-rose-700">Email.</span>{" "}
-                <a href="mailto:wooin1001@gmail.com">wooin1001@gmail.com</a>{" "}
+            <div className="h-full my-10 flex items-center text-slate-600 dark:text-slate-400 ">
+              <div>
+                <p>
+                  <em>Contact.·.·</em>
+                  <br /> <span className="text-rose-700">Email.</span>{" "}
+                  <a
+                    href="mailto:wooin1001@gmail.com"
+                    className="duration-1000 hover:text-rose-400 dark:hover:text-rose-200">
+                    wooin1001@gmail.com
+                  </a>
+                  <br />
+                  <span className="text-rose-700">Phone.</span>{" "}
+                  <a
+                    href="tel:010-2324-8983"
+                    className="duration-1000 hover:text-rose-400 dark:hover:text-rose-200">
+                    010 2324 8983
+                  </a>
+                </p>
                 <br />
-                <span className="text-rose-700">Phone.</span>
-                <a href="tel:010-2324-8983">010 2324 8983</a>
-              </p>
-              <br />
-              <p>
-                <em>Channel.·.·</em>
-                <br /> <span className="text-rose-700">Blog.</span>{" "}
-                <a href="https://bhk1324.tistory.com/">bhk1324.tistory.com</a>
-                <br />
-                <span className="text-rose-700">Github.</span>{" "}
-                <a href="https://github.com/wooinwoo">github.com/wooinwoo</a>
-              </p>
+                <p>
+                  <em>Channel.·.·</em>
+                  <br /> <span className="text-rose-700">Blog.</span>{" "}
+                  <a
+                    href="https://bhk1324.tistory.com/"
+                    target="_blank"
+                    className="duration-1000 hover:text-rose-400 dark:hover:text-rose-200">
+                    bhk1324.tistory.com
+                  </a>
+                  <br />
+                  <span className="text-rose-700">Github.</span>{" "}
+                  <a
+                    href="https://github.com/wooinwoo"
+                    target="_blank"
+                    className="duration-1000 hover:text-rose-400 dark:hover:text-rose-200">
+                    github.com/wooinwoo
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
