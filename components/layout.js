@@ -5,16 +5,16 @@ const colors = require("../tailwind.config").theme.extend.colors;
 export default function Layout({ children, page }) {
   const [mouseOver, setMouseOver] = useState(false);
   return (
-    <div className="min-h-screen h-full flex items-center">
+    <div className="min-h-screen h-full flex items-center dark:bg-slate-800">
       <section
-        className="z-50 group relative w-full p-5 md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto min-h-[700px]"
+        className="z-50 relative w-full p-5 md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto min-h-[700px]"
         onMouseOver={() => {
           setMouseOver(true);
         }}
         onMouseOut={() => {
           setMouseOver(false);
         }}>
-        <div className="absolute top-0 left-0">
+        <div className="absolute top-0 left-0 -z-50">
           <svg width="300" height="300">
             <defs>
               <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -45,7 +45,7 @@ export default function Layout({ children, page }) {
         </div>
         <Header />
         <div className="mt-10">{children}</div>
-        <div className="absolute bottom-0 right-0 rotate-180">
+        <div className="absolute bottom-0 right-0 rotate-180 -z-50">
           <svg
             width="300"
             height="300"
