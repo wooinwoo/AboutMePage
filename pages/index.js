@@ -21,7 +21,15 @@ export default function Home() {
               </h1>
               <div className="flex justify-center">
                 <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  Button
+                  <svg id="circle">
+                    <circle
+                      cx="35"
+                      cy="35"
+                      r="35"
+                      stroke="#e7e7e7"
+                      stroke-width="1"
+                      fill="transparent"></circle>
+                  </svg>
                 </button>
               </div>
             </div>
