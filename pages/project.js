@@ -147,7 +147,7 @@ export default function Project() {
                           ))}
                         </nav>
                       </div>
-                      <div>skills</div>
+                      <div className="outline">skills</div>
                     </div>
                   </div>
                   <div className="flex justify-around py-10 px-20 bg-gray-300 dark:bg-gray-700 rounded-lg mt-2 w-full h-[100px]">

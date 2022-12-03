@@ -4,14 +4,14 @@
 
 .card_front {
   backface-visibility: hidden;
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
 }
 .card_container:hover .card_front {
   transform: rotateY(180deg);
 }
 .card_back {
   backface-visibility: hidden;
-  transform: rotateY(0deg);
+  transform: rotateY(-180deg);
 }
 .card_container:hover .card_back {
   transform: rotateY(0deg);
