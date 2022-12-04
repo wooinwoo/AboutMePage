@@ -10,11 +10,22 @@ const projectValue = [
     },
     back: {
       developPeriod: "22.09 ~ 22.10 (6인개발)",
-      explanation: "카카오로그인, 일반로그인, 상품등록, 상품삭제, 상품정렬",
-      myContribution: ["게시판"],
+      explanation:
+        "카카오로그인, 일반로그인, 상품등록, 상품삭제, 상품검색, 상품정렬, 상품좋아요, 상품뷰, 리뷰등록, 감사메시지, 결제",
+      myContribution: [
+        "손님용 상품 페이지, 상세 페이지, 선물하기 페이지, 결제 페이지",
+        "관리자용 상품 등록 및 삭제",
+        "아임포트를 활용한 가상결제",
+      ],
       skills: [""],
     },
-    icons: ["./images/home.svg", "./images/github.svg"],
+    icons: [
+      {
+        imgSrc: "./images/github.svg",
+        href: "https://github.com/wooinwoo/zeroGifticon",
+      },
+      { imgSrc: "./images/notion.svg", href: "" },
+    ],
   },
   {
     front: {
@@ -25,11 +36,19 @@ const projectValue = [
     },
     back: {
       developPeriod: "22.10 ~ 22.11 (4인개발)",
-      explanation: "",
-      myContribution: ["게시판"],
+      explanation:
+        "발의안워드클라우드, 발의안비교페이지, 발의안게시판, 발의안상세설명모달창, 발의안좋아요, 발의안뷰",
+      myContribution: ["프로젝트 디자인", "발의안 게시판"],
       skills: [""],
     },
-    icons: ["./images/home.svg"],
+    icons: [
+      { imgSrc: "./images/home.svg", href: "" },
+      {
+        imgSrc: "./images/github.svg",
+        href: "https://github.com/wooinwoo/LawsCloud",
+      },
+      { imgSrc: "./images/notion.svg", href: "" },
+    ],
   },
   {
     front: {
@@ -40,10 +59,20 @@ const projectValue = [
     back: {
       developPeriod: "22.09 ~ 22.10 (1인개발)",
       explanation: "",
-      myContribution: ["게시판"],
+      myContribution: [
+        "사용자를 위한 다크모드 적용",
+        "반응형 웹 적용",
+        "localstorage를 이용한 장바구니 기능",
+      ],
       skills: [""],
     },
-    icons: ["./images/home.svg", "./images/github.svg"],
+    icons: [
+      { imgSrc: "./images/home.svg", href: "" },
+      {
+        imgSrc: "./images/github.svg",
+        href: "https://github.com/wooinwoo/react-shop",
+      },
+    ],
   },
   {
     front: {
@@ -54,10 +83,16 @@ const projectValue = [
     back: {
       developPeriod: "22.09 ~ 22.10 (1인개발)",
       explanation: "",
-      myContribution: ["게시판"],
+      myContribution: ["반응형 웹 적용", "NextJs를 사용한 SSR 웹 개발"],
       skills: [""],
     },
-    icons: ["./images/home.svg", "./images/github.svg"],
+    icons: [
+      { imgSrc: "./images/home.svg", href: "" },
+      {
+        imgSrc: "./images/github.svg",
+        href: "https://github.com/wooinwoo/AboutMePage",
+      },
+    ],
   },
 ];
 
@@ -118,19 +153,19 @@ export default function Project() {
                         <p className="flex justify-center text-sm dark:text-gray-300 mb-3">
                           {e.back.developPeriod}
                         </p>
-                        <p className="font-bold dark:text-gray-300">
+                        <p className="font-bold dark:text-gray-300 mb-1">
                           # 주요 기능 설명
                         </p>
                         <p className="text-sm dark:text-gray-300 mb-3">
                           {e.back.explanation}
                         </p>
-                        <p className="font-bold dark:text-gray-300">
+                        <p className="font-bold dark:text-gray-300 mb-1">
                           # 나의 기여도
                         </p>
                         <nav class="flex flex-col sm:items-start sm:text-left text-center items-start -mb-1 space-y-2">
                           {e.back.myContribution.map((e) => (
-                            <div className="text-sm dark:text-gray-300">
-                              <span className="bg-gray-800 text-indigo-400 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                            <div className="flex justify-center">
+                              <span className=" bg-gray-800 text-indigo-400 w-4 h-4 mr-3 rounded-full inline-flex items-center justify-center">
                                 <svg
                                   fill="none"
                                   stroke="currentColor"
@@ -142,17 +177,24 @@ export default function Project() {
                                   <path d="M20 6L9 17l-5-5"></path>
                                 </svg>
                               </span>
-                              {e}
+                              <span className="text-sm text-start dark:text-gray-300">
+                                {e}
+                              </span>
                             </div>
                           ))}
                         </nav>
                       </div>
-                      <div className="outline">skills</div>
+                      <div className="">
+                        <p className="font-bold dark:text-gray-300"># Skills</p>
+                        <div className="topBorder pb-4"></div>
+                      </div>
                     </div>
                   </div>
                   <div className="flex justify-around py-10 px-20 bg-gray-300 dark:bg-gray-700 rounded-lg mt-2 w-full h-[100px]">
-                    {e.icons.map((icon, idx) => (
-                      <img className="blocks" src={icon} key={idx} />
+                    {e.icons.map((e, idx) => (
+                      <a href={e.href} target="_blank" key={idx}>
+                        <img className="w-[20px]" src={e.imgSrc} key={idx} />
+                      </a>
                     ))}
                   </div>
                 </div>
