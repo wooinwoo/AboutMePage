@@ -16,3 +16,7 @@
 .card_container:hover .card_back {
   transform: rotateY(0deg);
 }
+
+.topBorder {
+  border-top: 1px gray solid;
+}
