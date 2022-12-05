@@ -17,7 +17,7 @@ const projectValue = [
         "관리자용 상품 등록 및 삭제",
         "아임포트를 활용한 가상결제",
       ],
-      skills: [""],
+      skills: { front: "react, css-module", deploy: "aws, s3" },
     },
     icons: [
       {
@@ -39,7 +39,7 @@ const projectValue = [
       explanation:
         "발의안워드클라우드, 발의안비교페이지, 발의안게시판, 발의안상세설명모달창, 발의안좋아요, 발의안뷰",
       myContribution: ["프로젝트 디자인", "발의안 게시판"],
-      skills: [""],
+      skills: { front: "react, css-module", deploy: "aws, s3" },
     },
     icons: [
       { imgSrc: "./images/home.svg", href: "" },
@@ -64,7 +64,7 @@ const projectValue = [
         "반응형 웹 적용",
         "localstorage를 이용한 장바구니 기능",
       ],
-      skills: [""],
+      skills: { front: "react, css-module", deploy: "aws, s3" },
     },
     icons: [
       { imgSrc: "./images/home.svg", href: "" },
@@ -84,7 +84,7 @@ const projectValue = [
       developPeriod: "22.09 ~ 22.10 (1인개발)",
       explanation: "",
       myContribution: ["반응형 웹 적용", "NextJs를 사용한 SSR 웹 개발"],
-      skills: [""],
+      skills: { front: "react, css-module", deploy: "aws, s3" },
     },
     icons: [
       { imgSrc: "./images/home.svg", href: "" },
@@ -145,7 +145,7 @@ export default function Project() {
                         {e.front.explanation}
                       </p>
                     </div>
-                    <div className="flex flex-col justify-between text-black z-10 p-4 md:px-10 absolute top-0 left-0 w-full h-full bg-gray-300 dark:bg-gray-700 rounded-lg duration-1000 card_back">
+                    <div className="flex flex-col justify-between text-black z-10 p-2 md:px-10 absolute top-0 left-0 w-full h-full bg-gray-300 dark:bg-gray-700 rounded-lg duration-1000 card_back">
                       <div>
                         <h2 className="flex justify-center text-xl text-gray-900 font-medium title-font mx-auto dark:text-white">
                           {e.front.title}
@@ -186,7 +186,26 @@ export default function Project() {
                       </div>
                       <div className="">
                         <p className="font-bold dark:text-gray-300"># Skills</p>
-                        <div className="topBorder pb-4"></div>
+                        <div className="topBorder pb-4">
+                          {"front" in e.back.skills && (
+                            <div className="dark:text-gray-300 text-sm">
+                              <span className="font-bold mr-6">Frontend:</span>
+                              {e.back.skills.front}
+                            </div>
+                          )}
+                          {"back" in e.back.skills && (
+                            <div className="dark:text-gray-300 text-sm">
+                              <span className="font-bold mr-5">Backend:</span>
+                              {e.back.skills.back}
+                            </div>
+                          )}
+                          {"deploy" in e.back.skills && (
+                            <div className="dark:text-gray-300 text-sm">
+                              <span className="font-bold">Deployment:</span>{" "}
+                              {e.back.skills.deploy}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
