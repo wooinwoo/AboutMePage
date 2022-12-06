@@ -13,11 +13,12 @@ const projectValue = [
       explanation:
         "카카오로그인, 일반로그인, 상품등록, 상품삭제, 상품검색, 상품정렬, 상품좋아요, 상품뷰, 리뷰등록, 감사메시지, 결제",
       myContribution: [
-        "손님용 상품 페이지, 상세 페이지, 선물하기 페이지, 결제 페이지",
-        "관리자용 상품 등록 및 삭제",
+        "관리자용[상품등록,삭제] 페이지 작업",
+        "손님용[상품,상품상세,선물하기,결제] 페이지 작업",
         "아임포트를 활용한 가상결제",
+        "REST API 연동 경험",
       ],
-      skills: { front: "react, css-module", deploy: "aws, s3" },
+      skills: { front: "React, CSS Module", deploy: "aws, s3" },
     },
     icons: [
       {
@@ -37,9 +38,9 @@ const projectValue = [
     back: {
       developPeriod: "22.10 ~ 22.11 (4인개발)",
       explanation:
-        "발의안워드클라우드, 발의안비교페이지, 발의안게시판, 발의안상세설명모달창, 발의안좋아요, 발의안뷰",
-      myContribution: ["프로젝트 디자인", "발의안 게시판"],
-      skills: { front: "react, css-module", deploy: "aws, s3" },
+        "발의안워드클라우드, 발의안비교페이지, 발의안게시판, 발의안상세설명모달창, 발의안좋아요, 발의안뷰, 발의안댓글",
+      myContribution: ["Figma를 이용한 프로젝트 디자인", "발의안 게시판 작업"],
+      skills: { front: "React, Styled Components", deploy: "aws, s3" },
     },
     icons: [
       { imgSrc: "./images/home.svg", href: "" },
@@ -58,13 +59,14 @@ const projectValue = [
     },
     back: {
       developPeriod: "22.09 ~ 22.10 (1인개발)",
-      explanation: "",
+      explanation:
+        "캐러셀이미지슬라이드, 상품, 상품상세, 상품검색, 다크모드, 장바구니",
       myContribution: [
         "사용자를 위한 다크모드 적용",
         "반응형 웹 적용",
         "localstorage를 이용한 장바구니 기능",
       ],
-      skills: { front: "react, css-module", deploy: "aws, s3" },
+      skills: { front: "React, Tailwind CSS", deploy: "Vercel" },
     },
     icons: [
       { imgSrc: "./images/home.svg", href: "" },
@@ -84,7 +86,7 @@ const projectValue = [
       developPeriod: "22.09 ~ 22.10 (1인개발)",
       explanation: "",
       myContribution: ["반응형 웹 적용", "NextJs를 사용한 SSR 웹 개발"],
-      skills: { front: "react, css-module", deploy: "aws, s3" },
+      skills: { front: "Next.js, Tailwind CSS", deploy: "aws, s3" },
     },
     icons: [
       { imgSrc: "./images/home.svg", href: "" },
