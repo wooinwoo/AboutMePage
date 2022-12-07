@@ -44,7 +44,7 @@ export default function Layout({ children, page }) {
           </svg>
         </div>
         <Header />
-        <div className="mt-10">{children}</div>
+        <div className="mt-5">{children}</div>
         <div className="absolute bottom-0 right-0 rotate-180 -z-50">
           <svg
             width="300"

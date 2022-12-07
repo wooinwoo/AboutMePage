@@ -17,8 +17,8 @@ module.exports = {
           color2: "#317773",
         },
         timeline: {
-          color1: "green",
-          color2: "gray",
+          color1: "#99F443",
+          color2: "#EC449B",
         },
         skills: {
           color1: "green",
