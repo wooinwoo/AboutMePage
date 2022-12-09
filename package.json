@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next build && next export",
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "aws s3 sync ./out s3://wiw-portfolio.com --profile=portfolio_inwoo"
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
