@@ -18,7 +18,7 @@ const projectValue = [
         "아임포트를 활용한 가상결제",
         "REST API 연동 경험",
       ],
-      skills: { front: "React, CSS Module", deploy: "aws, s3" },
+      skills: { front: "React, CSS Module", deploy: "AWS(S3,CloudFront)" },
     },
     icons: [
       {
@@ -40,7 +40,10 @@ const projectValue = [
       explanation:
         "발의안워드클라우드, 발의안비교페이지, 발의안게시판, 발의안상세설명모달창, 발의안좋아요, 발의안뷰, 발의안댓글",
       myContribution: ["Figma를 이용한 프로젝트 디자인", "발의안 게시판 작업"],
-      skills: { front: "React, Styled Components", deploy: "aws, s3" },
+      skills: {
+        front: "React, Styled Components",
+        deploy: "AWS(S3,CloudFront)",
+      },
     },
     icons: [
       { imgSrc: "./images/home.svg", href: "" },
@@ -78,15 +81,15 @@ const projectValue = [
   },
   {
     front: {
-      title: "자기소개~",
+      title: "개인 포트폴리오",
       imgSrc: "./images/lawsCloud.png",
       explanation: "NextJs를 사용한 자기소개 웹페이지 입니다.",
     },
     back: {
       developPeriod: "22.09 ~ 22.10 (1인개발)",
-      explanation: "",
+      explanation: "우인우 포트폴리오 소개[TimeLine, skills, Project]",
       myContribution: ["반응형 웹 적용", "NextJs를 사용한 SSR 웹 개발"],
-      skills: { front: "Next.js, Tailwind CSS", deploy: "aws, s3" },
+      skills: { front: "Next.js, Tailwind CSS", deploy: "AWS(S3,CloudFront)" },
     },
     icons: [
       { imgSrc: "./images/home.svg", href: "" },
