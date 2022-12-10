@@ -51,7 +51,7 @@ const careerValue = [
 
 const awardsMoreValue = [
   {
-    title: "파이썬을 활용한 머신러닝 교육 수료",
+    title: "배재대학교 머신러닝 교육",
     period: "2021. 09",
 
     contents: [
