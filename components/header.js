@@ -1,6 +1,13 @@
 import Link from "next/link";
 import DarkModeToggleButton from "./darkModeToggleButton";
 
+const headerValue = [
+  { title: "Home", href: "/" },
+  { title: "TimeLine", href: "/timeline" },
+  { title: "Skills", href: "/skills" },
+  { title: "Project", href: "/project" },
+];
+
 export default function Header() {
   return (
     <header className="text-gray-600 body-font">
@@ -20,31 +27,13 @@ export default function Header() {
           <span className="ml-3 text-xl dark:text-white">W.inWoo</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link
-            href="/"
-            className="mr-5 text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-gray-50">
-            Home
-          </Link>
-          <Link
-            href="/about-me"
-            className="mr-5 text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-gray-50">
-            About Me
-          </Link>
-          <Link
-            href="/timeline"
-            className="mr-5 text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-gray-50">
-            TimeLine
-          </Link>
-          <Link
-            href="/skills"
-            className="mr-5 text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-gray-50">
-            Skills
-          </Link>
-          <Link
-            href="/project"
-            className="mr-5 text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-gray-50">
-            Project
-          </Link>
+          {headerValue.map((e) => (
+            <Link
+              href={e.href}
+              className="mr-5 text-slate-500 dark:text-slate-400 hover:text-gray-900 dark:hover:text-gray-50">
+              {e.title}
+            </Link>
+          ))}
           <DarkModeToggleButton />
         </nav>
       </div>
