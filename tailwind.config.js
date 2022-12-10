@@ -9,24 +9,20 @@ module.exports = {
     extend: {
       colors: {
         home: {
-          color1: "#99F443",
-          color2: "#EC449B",
-        },
-        "about-me": {
           color1: "#E2D0F9",
           color2: "#317773",
         },
         timeline: {
+          color1: "#F2EDD7",
+          color2: "#755139",
+        },
+        skills: {
           color1: "#99F443",
           color2: "#EC449B",
         },
-        skills: {
-          color1: "green",
-          color2: "gray",
-        },
         project: {
-          color1: "#FFF548",
-          color2: "#3C1A5B",
+          color1: "#CBCE91",
+          color2: "#76528B",
         },
       },
       secondary: {
