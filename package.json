@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_ENV=local node server.js",
     "build": "next build && next export",
     "start": "NODE_ENV=production node server.js",
     "deploy": "aws s3 sync ./out s3://wiw-portfolio.com --profile=portfolio_inwoo"

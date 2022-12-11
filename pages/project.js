@@ -189,7 +189,7 @@ export default function Project() {
                           ))}
                         </nav>
                       </div>
-                      <div className="">
+                      <div>
                         <p className="font-bold dark:text-gray-300"># Skills</p>
                         <div className="topBorder pb-4">
                           {"front" in e.back.skills && (
@@ -251,18 +251,18 @@ export default function Project() {
                     <span className="inline-block relative">
                       {e.front.title}
                       <span
-                        className="inline-block absolute bottom-0 left-0 w-full h-[1px] duration-700 z-0 group-hover:z-10"
+                        className="inline-block absolute bottom-0 left-0 w-full h-[2px] duration-700 z-0 group-hover:z-10"
                         style={{
                           background:
-                            "linear-gradient(135deg,#FFF548 0%,#3C1A5B 50%,#FFF548 100%)",
+                            "linear-gradient(135deg,#CBCE91 0%,#76528B 50%,#CBCE91 100%)",
                           opacity: currentImgIndex === idx ? "1" : "0",
                         }}
                       />
                       <span
-                        className="inline-block absolute bottom-0 left-0 w-full h-[1px] duration-700 z-10 group-hover:z-0"
+                        className="inline-block absolute bottom-0 left-0 w-full h-[2px] duration-700 z-10 group-hover:z-0"
                         style={{
                           background:
-                            "linear-gradient(135deg,#3C1A5B 0%,#FFF548 50%,#3C1A5B 100%)",
+                            "linear-gradient(135deg,#76528B 0%,#CBCE91 50%,#76528B 100%)",
                           opacity: currentImgIndex === idx ? "1" : "0",
                         }}
                       />
@@ -276,13 +276,13 @@ export default function Project() {
               className="absolute w-[90px] h-[90px] -z-10 -top-1 -left-1 rounded-tl-lg duration-700 opacity-100 group-hover:opacity-0"
               style={{
                 background:
-                  "linear-gradient(135deg,#FFF548 0%,#3C1A5B 50%,#FFF548 100%)",
+                  "linear-gradient(135deg,#CBCE91 0%,#76528B 50%,#CBCE91 100%)",
               }}></div>
             <div
               className="absolute w-[90px] h-[90px] -z-10 -top-1 -left-1 rounded-tl-lg duration-700 opacity-0 group-hover:opacity-100"
               style={{
                 background:
-                  "linear-gradient(135deg,#3C1A5B 0%,#FFF548 50%,#3C1A5B 100%)",
+                  "linear-gradient(135deg,#76528B 0%,#CBCE91 50%,#76528B 100%)",
               }}></div>
           </div>
         </div>
