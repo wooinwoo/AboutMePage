@@ -27,7 +27,10 @@ const projectValue = [
         imgSrc: "./images/github.svg",
         href: "https://github.com/wooinwoo/zeroGifticon",
       },
-      { imgSrc: "./images/notion.svg", href: "" },
+      {
+        imgSrc: "./images/notion.svg",
+        href: "https://foul-cork-590.notion.site/Zero-GIFT-7c814c5458a54d1a96b0a9d99b9be3ac",
+      },
     ],
   },
   {
@@ -48,12 +51,15 @@ const projectValue = [
       },
     },
     icons: [
-      { imgSrc: "./images/home.svg", href: "" },
+      { imgSrc: "./images/home.svg", href: "https://lawscolud.top" },
       {
         imgSrc: "./images/github.svg",
         href: "https://github.com/wooinwoo/LawsCloud",
       },
-      { imgSrc: "./images/notion.svg", href: "" },
+      {
+        imgSrc: "./images/notion.svg",
+        href: "https://foul-cork-590.notion.site/099c8717ace5409c977a31d4a725dea6",
+      },
     ],
   },
   {
@@ -74,7 +80,10 @@ const projectValue = [
       skills: { front: "React, Tailwind CSS", deploy: "Vercel" },
     },
     icons: [
-      { imgSrc: "./images/home.svg", href: "" },
+      {
+        imgSrc: "./images/home.svg",
+        href: "https://react-shop-9jrt.vercel.app/",
+      },
       {
         imgSrc: "./images/github.svg",
         href: "https://github.com/wooinwoo/react-shop",
@@ -94,7 +103,6 @@ const projectValue = [
       skills: { front: "Next.js, Tailwind CSS", deploy: "AWS(S3,CloudFront)" },
     },
     icons: [
-      { imgSrc: "./images/home.svg", href: "" },
       {
         imgSrc: "./images/github.svg",
         href: "https://github.com/wooinwoo/AboutMePage",
