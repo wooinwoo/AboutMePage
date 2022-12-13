@@ -44,13 +44,15 @@ export default function ProjectList({
           style={{
             background:
               "linear-gradient(135deg,#CBCE91 0%,#76528B 50%,#CBCE91 100%)",
-          }}></div>
+          }}
+        />
         <div
           className="absolute w-[90px] h-[90px] -z-10 -top-1 -left-1 rounded-tl-lg duration-700 opacity-0 group-hover:opacity-100"
           style={{
             background:
               "linear-gradient(135deg,#76528B 0%,#CBCE91 50%,#76528B 100%)",
-          }}></div>
+          }}
+        />
       </div>
     </div>
   );
