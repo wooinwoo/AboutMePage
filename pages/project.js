@@ -93,7 +93,7 @@ const projectValue = [
   {
     front: {
       title: "개인 포트폴리오",
-      imgSrc: "./images/lawsCloud.png",
+      imgSrc: "./images/aboutMe.png",
       explanation: "NextJs를 사용한 자기소개 웹페이지 입니다.",
     },
     back: {
